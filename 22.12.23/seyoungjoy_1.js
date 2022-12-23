@@ -1,22 +1,22 @@
-function solution(participant, completion) {
-    const m = new Map();
-
-    for (const name of participant) {
-        let count = m.get(name) || 0;
-        m.set(name, count+1);
+function solution(pt, cp) {
+    let answer = [];
+    let map = new Map();
+    for(let x of pt){
+        if(map.has(x)) map.set(x, map.get(x)+1)
+        else map.set(x,1)
     }
 
-    for (const name of completion) {
-        const count = m.get(name);
-        if (count === 1) {
-            m.delete(name);
-        } else {
-            m.set(name, count - 1);
-        }
+    for(let x of cp){
+        if(map.has(x)) map.set(x,map.get(x)-1)
     }
 
-    for (const name of m.keys()) {
-        return name;
+    for(let [key,val] of map){
+        if(val === 1) return key;
     }
-    return "no answer";
+
+    return answer;
 }
+
+const participant = ["mislav", "stanko", "mislav", "ana"];
+const completion = ["stanko", "ana", "mislav"];
+solution(participant, completion);
