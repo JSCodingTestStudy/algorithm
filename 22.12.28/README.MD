@@ -42,7 +42,7 @@
 - 제한 사항에서 sizes의 길이는 1 이상 10,000 이하입니다
 - 이부분을 통해 이중 for문 일경우 (최대 10,000 \* 10,000 = 1억회) 약 1초정도 소요되는 문제기 떄문에 크게 문제가 없을경우 for문으로 풀어도 된다고 파악함.
 
-```jsx
+```js
 function solution(sizes) {
   let answer = 0;
 
@@ -65,7 +65,7 @@ function solution(sizes) {
 - 해당 문제도 제한 사항이 "시험은 최대 10,000 문제로 구성되어있습니다."를 확인하고 우선 for문으로 접근
 - for문으로도 풀리는 문제 이므로 다른 방식 적용 안함.
 
-```jsx
+```js
 function solution(answers) {
   var answer = [];
   let p1 = [1, 2, 3, 4, 5];
@@ -118,7 +118,7 @@ Example:
 
 - solve.1 new ListNode()로 풀기 => Brute-Forece
 
-```jsx
+```js
 var mergeTwoLists = function (l1, l2) {
   let merge = new ListNode();
   let head = merge;
@@ -145,7 +145,7 @@ var mergeTwoLists = function (l1, l2) {
 
 - solve.2 재귀를 활용하여 풀기
 
-```jsx
+```js
 let mergeTwoLists = function (l1, l2) {
   if (!l1 || !l2) return l1 ? l1 : l2;
   if (l1.val < l2.val) {
@@ -164,7 +164,7 @@ let mergeTwoLists = function (l1, l2) {
 
 - 10진수 N이 입력되면 2진수로 변환하여 출력하는 프로그램을 작성하세요.
 
-```jsx
+```js
 function solution3(num) {
   let answer = "";
 
@@ -218,7 +218,7 @@ function solution3(num) {
 - `arrSum: [number] => numberarrSum([ ]) = 0arrSum([e1, e2, ... , en]) = e1 + arrSum([e2, ..., en])`
 - 배열을 `head`와 나머지 부분(`tail`)으로 구분하는 방법만 안다면, 함수 arrSum을 재귀적으로 구현할 수 있습니다.
 
-```jsx
+```js
 function arrSum(arr) {
   //Base Case : 문제를 더 이상 쪼갤 수 없는 경우 (재귀의 기초)
   if (arr의 길이가 0인 경우) {
@@ -236,7 +236,7 @@ function arrSum(arr) {
 
 - 재귀 함수의 일반적인 템플릿.
 
-```jsx
+```js
 function recursive(input1, input2, ...) {
   // Base Case : 문제를 더 이상 쪼갤 수 없는 경우
   if (문제를 더 이상 쪼갤 수 없을 경우) {
