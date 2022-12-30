@@ -7,10 +7,10 @@
 # Graph
 - 인접 리스트로 표현하는 경우
 - 인접 행렬로 표현하는 경우
-![img.png](img.png)
+![img.png](../assets/22.12.30/dfs_2.png)
 
 # Code
-![dfs_1](../assets/22.12.30/dfs_2.png)  
+![dfs_1](../assets/22.12.30/dfs_3.png)  
 이미지 출처: [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 ```javascript
 const adj = [
