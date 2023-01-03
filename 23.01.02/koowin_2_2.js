@@ -1,7 +1,7 @@
 function solution(numbers) {
     let answer = 0;
     const isUsed = new Array(numbers.length).fill(false);
-    const m = new Map();
+    const set = new Set();
     const isPrime = new Array(10000000).fill(true);
 
     // 에라토스테네스의 체
@@ -20,7 +20,7 @@ function solution(numbers) {
     }
     sieve();
     function dfs(str, depth) {
-        m.set(Number(str), true);
+        set.add(Number(str));
 
         for (let i = 0; i < numbers.length; i++) {
             if (!isUsed[i]) {
@@ -32,7 +32,7 @@ function solution(numbers) {
     }
 
     dfs("", 0);
-    for (let i of m.keys()) {
+    for (let i of set) {
         if(isPrime[i]) answer++;
     }
     return answer;
