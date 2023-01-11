@@ -1,4 +1,4 @@
-export default class Node {
+class Node {
     constructor(item) {
         this.item = item;
         this.p = null;
@@ -22,7 +22,7 @@ export default class Node {
     }
 }
 // double linked list queue
-export default class Queue {
+class Queue {
     constructor() {
         this.first = null;
         this.last = null;
@@ -106,3 +106,5 @@ export default class Queue {
         return this.last.item;
     }
 }
+
+export {Queue};

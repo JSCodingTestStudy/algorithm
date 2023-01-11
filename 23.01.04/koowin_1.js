@@ -1,4 +1,4 @@
-import Queue from './koowin_queue.js';
+import {Queue} from './koowin_queue.js';
 function solution(maps) {
     maps = maps.map(arr => arr.map(x => x === 1 ? Number.MAX_SAFE_INTEGER : 0));
 
